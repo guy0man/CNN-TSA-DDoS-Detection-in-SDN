@@ -1,0 +1,112 @@
+{
+  "target_ratio_ddos_per_benign": 1.0,
+  "global_caps": {
+    "benign": null,
+    "ddos": null
+  },
+  "final_counts_global": {
+    "benign": 109424,
+    "ddos": 112893,
+    "total_rows_written": 222317
+  },
+  "per_scenario_counts": {
+    "DRDOS_DNS": {
+      "benign": 3402,
+      "ddos": 3402,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_LDAP": {
+      "benign": 1612,
+      "ddos": 1612,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_MSSQL": {
+      "benign": 2006,
+      "ddos": 2006,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_NETBIOS": {
+      "benign": 1707,
+      "ddos": 1707,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_NTP": {
+      "benign": 14365,
+      "ddos": 14365,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_SNMP": {
+      "benign": 1507,
+      "ddos": 1507,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_SSDP": {
+      "benign": 763,
+      "ddos": 763,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "DRDOS_UDP": {
+      "benign": 2157,
+      "ddos": 2157,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "LDAP": {
+      "benign": 5124,
+      "ddos": 5124,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "MSSQL": {
+      "benign": 2794,
+      "ddos": 2794,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "NETBIOS": {
+      "benign": 1321,
+      "ddos": 1321,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "PORTMAP": {
+      "benign": 4734,
+      "ddos": 4734,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "SYN": {
+      "benign": 31778,
+      "ddos": 35247,
+      "ratio_ddos_per_benign": 1.1091635722827113
+    },
+    "TFTP": {
+      "benign": 25247,
+      "ddos": 25247,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "UDP": {
+      "benign": 3134,
+      "ddos": 3134,
+      "ratio_ddos_per_benign": 1.0
+    },
+    "UDPLAG": {
+      "benign": 7773,
+      "ddos": 7773,
+      "ratio_ddos_per_benign": 1.0
+    }
+  },
+  "per_scenario_rows_written": {
+    "DRDOS_DNS": 6804,
+    "DRDOS_LDAP": 3224,
+    "DRDOS_MSSQL": 4012,
+    "DRDOS_NTP": 28730,
+    "DRDOS_NETBIOS": 3414,
+    "DRDOS_SNMP": 3014,
+    "DRDOS_SSDP": 1526,
+    "DRDOS_UDP": 4314,
+    "LDAP": 10248,
+    "MSSQL": 5588,
+    "NETBIOS": 2642,
+    "PORTMAP": 9468,
+    "SYN": 67025,
+    "TFTP": 50494,
+    "UDP": 6268,
+    "UDPLAG": 15546
+  }
+}

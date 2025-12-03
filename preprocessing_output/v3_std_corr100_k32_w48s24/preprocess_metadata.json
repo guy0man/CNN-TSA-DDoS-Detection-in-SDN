@@ -1,0 +1,221 @@
+{
+  "leak_diagnostics": {
+    "row_overlap_pre_transform": {
+      "train_test": 1417,
+      "train_val": 1436,
+      "val_test": 579
+    },
+    "expected_zero": true,
+    "window_overlap": {
+      "train_val_after_clean": 0,
+      "train_test_after_clean": 0
+    }
+  },
+  "preproc_tag": "standard_corr1_k32_w48s24",
+  "selected_features": [
+    "num__Average Packet Size",
+    "num__Avg Bwd Segment Size",
+    "num__Avg Fwd Segment Size",
+    "num__Bwd IAT Mean",
+    "num__Bwd IAT Total",
+    "num__Bwd Packet Length Max",
+    "num__Bwd Packet Length Mean",
+    "num__Bwd Packet Length Min",
+    "num__Bwd Packet Length Std",
+    "num__CWE Flag Count",
+    "num__Down/Up Ratio",
+    "num__Flow Bytes/s",
+    "num__Flow IAT Mean",
+    "num__Flow IAT Std",
+    "num__Fwd IAT Mean",
+    "num__Fwd IAT Std",
+    "num__Fwd PSH Flags",
+    "num__Fwd Packet Length Max",
+    "num__Fwd Packet Length Mean",
+    "num__Fwd Packet Length Min",
+    "num__Fwd Packet Length Std",
+    "num__Idle Std",
+    "num__Init_Win_bytes_backward",
+    "num__Init_Win_bytes_forward",
+    "num__Min Packet Length",
+    "num__Packet Length Mean",
+    "num__Packet Length Std",
+    "num__Packet Length Variance",
+    "num__Protocol",
+    "num__RST Flag Count",
+    "num__URG Flag Count",
+    "num__min_seg_size_forward"
+  ],
+  "corr_dropped": [],
+  "dropped_by_label_corr": [
+    "cat__LabelText_0",
+    "cat__LabelText_1"
+  ],
+  "num_features_final": 32,
+  "split_mode": "group",
+  "split_sizes": {
+    "train": 101505,
+    "val": 14690,
+    "test": 38196
+  },
+  "class_counts": {
+    "train": {
+      "0": 64479,
+      "1": 37026
+    },
+    "val": {
+      "0": 11317,
+      "1": 1860
+    },
+    "test": {
+      "0": 19778,
+      "1": 16715
+    }
+  },
+  "removed_columns_explicit": [
+    "Flow ID",
+    "Flow ID ",
+    "FlowID",
+    "Inbound",
+    "*Port*"
+  ],
+  "windowing": "on",
+  "window": {
+    "size": 48,
+    "stride": 24
+  },
+  "params": {
+    "input": "merged_outputs/combined.parquet",
+    "output_dir": "preprocessing_output/v3_std_corr100_k32_w48s24",
+    "label_col": "Label",
+    "timestamp_col": "Timestamp",
+    "test_frac": 0.2,
+    "val_frac": 0.1,
+    "random_state": 17,
+    "k_features": 32,
+    "corr_thresh": 1.0,
+    "cap_after_corr": null,
+    "scaler": "standard",
+    "split_mode": "group",
+    "sample_frac": null,
+    "parquet_batch_rows": 10000,
+    "parquet_inner_rows": 2000,
+    "max_dense_features": 15000,
+    "windowing": "on",
+    "window_size": 48,
+    "window_stride": 24,
+    "compat_names": false,
+    "cap_per_class": null,
+    "drop_label_corr_thresh": 0.8,
+    "test_size": 0.2,
+    "val_size": 0.125
+  },
+  "top_label_correlations_train_preview": {
+    "Min Packet Length": 0.688438621077463,
+    "Fwd Packet Length Min": 0.6782538822776053,
+    "Avg Fwd Segment Size": 0.6257014713135006,
+    "Fwd Packet Length Mean": 0.6257014713135006,
+    "Packet Length Mean": 0.5380184506936914,
+    "Average Packet Size": 0.5281191432566288,
+    "Down/Up Ratio": 0.4503412522398788,
+    "URG Flag Count": 0.40625856279033157,
+    "Flow IAT Mean": 0.3730819472522265,
+    "Bwd Packet Length Min": 0.34071715515389317
+  },
+  "label_breakdown": {
+    "train": {
+      "counts": {
+        "1": 76838,
+        "0": 73369
+      },
+      "pct_of_split": {
+        "1": 51.1547397924198,
+        "0": 48.8452602075802
+      },
+      "pct_within_ddos": {
+        "1": 51.1547397924198,
+        "0": 48.8452602075802
+      }
+    },
+    "val": {
+      "counts": {
+        "0": 13371,
+        "1": 13371
+      },
+      "pct_of_split": {
+        "0": 50.0,
+        "1": 50.0
+      },
+      "pct_within_ddos": {
+        "0": 50.0,
+        "1": 50.0
+      }
+    },
+    "test": {
+      "counts": {
+        "0": 22684,
+        "1": 22684
+      },
+      "pct_of_split": {
+        "0": 50.0,
+        "1": 50.0
+      },
+      "pct_within_ddos": {
+        "0": 50.0,
+        "1": 50.0
+      }
+    }
+  },
+  "scenario_distribution": {
+    "train": {
+      "rows": {
+        "SYN": 67025,
+        "TFTP": 50494,
+        "UDPLAG": 15546,
+        "DRDOS_DNS": 6804,
+        "MSSQL": 5588,
+        "DRDOS_LDAP": 3224,
+        "DRDOS_SSDP": 1526
+      },
+      "pct": {
+        "SYN": 44.62,
+        "TFTP": 33.62,
+        "UDPLAG": 10.35,
+        "DRDOS_DNS": 4.53,
+        "MSSQL": 3.72,
+        "DRDOS_LDAP": 2.15,
+        "DRDOS_SSDP": 1.02
+      }
+    },
+    "val": {
+      "rows": {
+        "LDAP": 10248,
+        "PORTMAP": 9468,
+        "DRDOS_MSSQL": 4012,
+        "DRDOS_SNMP": 3014
+      },
+      "pct": {
+        "LDAP": 38.32,
+        "PORTMAP": 35.4,
+        "DRDOS_MSSQL": 15.0,
+        "DRDOS_SNMP": 11.27
+      }
+    },
+    "test": {
+      "rows": {
+        "DRDOS_NTP": 28730,
+        "UDP": 6268,
+        "DRDOS_UDP": 4314,
+        "DRDOS_NETBIOS": 3414,
+        "NETBIOS": 2642
+      },
+      "pct": {
+        "DRDOS_NTP": 63.33,
+        "UDP": 13.82,
+        "DRDOS_UDP": 9.51,
+        "DRDOS_NETBIOS": 7.53,
+        "NETBIOS": 5.82
+      }
+    }
+  }
+}

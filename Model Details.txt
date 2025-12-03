@@ -1,0 +1,47 @@
+PREPROCESSING
+
+split_mode= temporal 
+k_features= 45 
+corr_thresh= 0.95 
+windowing= on 
+window_size= 48 
+window_stride= 24 
+parquet_batch_rows= 8000 
+parquet_inner_rows= 1000
+
+
+
+MODEL DEVELOPEMENT
+
+T = 48, stride = 24
+Target F ≈ 45 (your pipeline’s --k_features 45)
+
+CNN (1D over time)
+
+Conv1: in=F, out=32, kernel=5, stride=1, padding=same, activation=ReLU
+MaxPool1: pool_size=2 → time goes 48 → 24
+
+Conv2: in=32, out=64, kernel=3, stride=1, padding=same, activation=ReLU
+MaxPool2: pool_size=2 → time goes 24 → 12 ← (recommended)
+(If you must keep more temporal detail, set pool2=1 and keep T′=24, but training is a bit heavier.)
+
+TSA (Transformer block on sequence)
+T′ = 12 (or 24 if you keep pool2=1)
+Embedding E = 64 (from Conv2 channels)
+Heads H = 2 (more expressive than 1, still light)
+per-head dims: d_k = d_q = d_v = 32
+Positional encoding: sinusoidal or learned (T′, 64)
+Block: LayerNorm → MHSA → Dropout(0.1) → Residual → LayerNorm → FFN(64→128→64, GELU) → Dropout(0.1) → Residual
+
+Classifier head
+Global Average Pool over time → (B, 64)
+Dense(128) + ReLU + Dropout(0.3)
+Dense(1) → use BCEWithLogitsLoss (don’t add sigmoid in the layer)
+
+Training
+Optimizer: AdamW, lr = 1e-3, weight_decay = 1e-4
+Scheduler: ReduceLROnPlateau on val loss (factor 0.5, patience 3, min_lr 1e-6)
+Early stopping: patience 7–10 on val loss
+Batch size: 512 (GPU) / 256 (CPU); scale to your memory
+Gradient clipping: max_norm=1.0
+Mixed precision (if GPU): on (gives easy speedup)

@@ -1,0 +1,38 @@
+{
+  "data_dir": "preprocessing_output/v2_minmax_corr85_k60_w48s24",
+  "subdir": "minmax_corr0.85_k60_w48s24\\lr1e-05_wd1e-04_pat7",
+  "num_features": 35,
+  "num_heads": 2,
+  "hidden_dim": 64,
+  "lr": 1e-05,
+  "weight_decay": 0.0001,
+  "batch_size": 512,
+  "epochs": 50,
+  "patience": 7,
+  "pool2": false,
+  "device": "cpu",
+  "deterministic": true,
+  "seed": 42,
+  "loss": "bce_smooth(0.05)",
+  "scheduler": "plateau",
+  "thr_objective": "f1",
+  "cost_fp": 1.0,
+  "cost_fn": 5.0,
+  "cost_tp": 1.0,
+  "regularization": {
+    "cnn_dropout": 0.1,
+    "ffn_dropout": 0.1
+  },
+  "thresholding": {
+    "mode": "fixed",
+    "fixed_threshold": 0.5
+  },
+  "env": {
+    "python": "3.11.9",
+    "torch": "2.8.0+cpu",
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_name": "cpu"
+  }
+}

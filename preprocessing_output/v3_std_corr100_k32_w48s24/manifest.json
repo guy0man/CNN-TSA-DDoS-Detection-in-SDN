@@ -1,0 +1,110 @@
+{
+  "output_dir": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24",
+  "files": {
+    "X_train": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\X_train.npy",
+      "exists": true,
+      "shape": [
+        101505,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "y_train": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\y_train.npy",
+      "exists": true,
+      "shape": [
+        101505
+      ],
+      "dtype": "int8"
+    },
+    "X_val": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\X_val.npy",
+      "exists": true,
+      "shape": [
+        13177,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "y_val": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\y_val.npy",
+      "exists": true,
+      "shape": [
+        13177
+      ],
+      "dtype": "int8"
+    },
+    "X_test": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\X_test.npy",
+      "exists": true,
+      "shape": [
+        36493,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "y_test": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\y_test.npy",
+      "exists": true,
+      "shape": [
+        36493
+      ],
+      "dtype": "int8"
+    },
+    "Xw_train": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\Xw_train.npy",
+      "exists": true,
+      "shape": [
+        4228,
+        48,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "yw_train": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\yw_train.npy",
+      "exists": true,
+      "shape": [
+        4228
+      ],
+      "dtype": "int8"
+    },
+    "Xw_val": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\Xw_val.npy",
+      "exists": true,
+      "shape": [
+        548,
+        48,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "yw_val": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\yw_val.npy",
+      "exists": true,
+      "shape": [
+        548
+      ],
+      "dtype": "int8"
+    },
+    "Xw_test": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\Xw_test.npy",
+      "exists": true,
+      "shape": [
+        1519,
+        48,
+        32
+      ],
+      "dtype": "float64"
+    },
+    "yw_test": {
+      "path": "C:\\Users\\Martin\\Documents\\Visual Studio 2022\\Projects\\CNN-TSA DDoS Detection in SDN\\preprocessing_output\\v3_std_corr100_k32_w48s24\\yw_test.npy",
+      "exists": true,
+      "shape": [
+        1519
+      ],
+      "dtype": "int8"
+    }
+  }
+}
